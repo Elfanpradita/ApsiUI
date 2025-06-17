@@ -28,6 +28,9 @@ Proyek ini adalah dashboard admin modern untuk manajemen data buku di Gramedia, 
 git clone https://github.com/namauser/gramedia-admin.git
 cd apsi
 composer install
+chown -R www-data:www-data storage/*
+chmod 777 -R storage/*
+chmod 777 bootstrap/*
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
